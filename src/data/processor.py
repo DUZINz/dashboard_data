@@ -10,6 +10,7 @@ class DataProcessor:
             self.data = self.read_excel(file_path)
         else:
             raise ValueError("Unsupported file format. Please provide a CSV or Excel file.")
+        # print(f"Data loaded successfully from {file_path}. Shape: {self.data.shape}")
         return self.data
 
     def read_csv(self, file_path):

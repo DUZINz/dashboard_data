@@ -21,3 +21,27 @@
     </div>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .chart-container { text-align: center; margin: 20px 0; }
+        img { max-width: 100%; height: auto; }
+        .back-link { display: inline-block; margin-top: 20px; color: #007bff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Dashboard Results</h1>
+    <div class="chart-container">
+        {% if charts %}
+            <img src="{{ charts }}" alt="Data Visualization">
+        {% else %}
+            <p>No chart generated.</p>
+        {% endif %}
+    </div>
+    <a href="/" class="back-link">← Upload another file</a>
+</body>
+</html>
